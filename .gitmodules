@@ -1,0 +1,6 @@
+[submodule "tmux-config"]
+	path = tmux-config
+	url = https://github.com/amar-jay/tmux-config
+[submodule "nvim"]
+	path = nvim
+	url = https://github.com/amar-jay/nvim-config-lua
