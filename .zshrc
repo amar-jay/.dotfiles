@@ -5,13 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$HOME/.local/bin:$PATH
-
-# adding personal snippets
-export PATH=$HOME/notes/configs:$PATH
-
 # Path to your oh-my-zsh installation.
 export ZSH="/home/manan/.oh-my-zsh"
 
@@ -33,7 +26,7 @@ ZSH_THEME=powerlevel10k/powerlevel10k
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+ HYPHEN_INSENSITIVE="true"
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
@@ -111,40 +104,6 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=244"
 # For a full list of active aliases, run `alias`.
 #
 # Aliases
-alias zshconfig="mate ~/.zshrc"
-alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias vim="nvim"
-alias py="python3"
-alias python="python.exe"
-alias jup='cd /home/manan/notebooks && jupyter.exe notebook --no-browser'
-
-#alias xclip for clipboard
-alias copy="xclip -selection clipboard"
-alias "c=xclip"
-alias "p=xclip -o"
-alias "v=xclip -sel clip"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-#--Golang config --
-export GOROOT=/usr/local/go-1.19
-export GOPATH=$HOME/code/go
-export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
-export PATH=$PATH:$HOME/code/go/bin
-
-
-#--Rust config --
-export PATH=$HOME/.cargo/bin:$PATH
-
-#--Carbon config --
-export PATH="$(brew --prefix llvm)/bin:${PATH}"
-
+#
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-alias subl="/mnt/c/Program\ Files/Sublime\ Text/sublime_text.exe"
