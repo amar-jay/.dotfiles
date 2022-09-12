@@ -82,7 +82,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew z node npm macos bower zsh-autosuggestions zsh-z)
+plugins=(git brew z node npm zsh-autosuggestions zsh-z)
 
 source $ZSH/oh-my-zsh.sh
 
