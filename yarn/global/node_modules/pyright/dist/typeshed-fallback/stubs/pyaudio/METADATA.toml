@@ -1,2 +1,0 @@
-version = "0.2.*"
-stubtest_apt_dependencies = ["portaudio19-dev"]
