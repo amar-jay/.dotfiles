@@ -1,9 +1,11 @@
-*
+./*
+!.*
 !*.*
 !oh-my-zsh
 !README.md
 !nvim
 !tmux*
+tmux/plugins
 !tabnine
 !turborepo
 !yarn

@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "@eslint/create-config": "^0.3.0",
+    "@expo/ngrok": "^4.1.0",
+    "@sanity/cli": "^2.30.2",
+    "@wundergraph/wunderctl": "^0.94.1",
+    "create-expo-app": "^1.0.1",
+    "create-mf-app": "^1.0.15",
+    "create-next-app": "^12.2.4",
+    "create-nuxt-app": "^4.0.0",
+    "create-react-app": "^5.0.1",
+    "create-t3-app": "^5.4.0",
+    "create-turbo": "^1.4.2",
+    "create-vite": "^3.0.2",
+    "firebase-tools": "^10.0.1",
+    "instant-markdown-d": "^0.2.0",
+    "mocha": "^9.2.2",
+    "neovim": "^4.10.1",
+    "nodemon": "^2.0.19",
+    "pyright": "^1.1.245",
+    "serve": "^13.0.2",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.12"
+  }
+}
