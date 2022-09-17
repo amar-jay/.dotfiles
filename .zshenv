@@ -56,6 +56,8 @@ export PATH=$PATH:$HOME/code/go/bin
 export PATH=$HOME/.cargo/bin:$PATH
 
 #--Carbon config --
-export PATH="$(brew --prefix llvm)/bin:${PATH}"
+# brew import error
+# export PATH="$(brew --prefix llvm)/bin:${PATH}"
+export PATH="/home/linuxbrew/.linuxbrew/opt/llvm/bin:${PATH}"
 
-
+# Commands run at startup 
