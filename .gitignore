@@ -8,8 +8,5 @@ node_modules
 !tmux*
 tmux/plugins
 !tabnine
-!turborepo
 !yarn
-!matplotlib
-!Electron
 !wslu
