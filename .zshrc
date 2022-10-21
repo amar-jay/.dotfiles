@@ -108,3 +108,18 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=244"
 #
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Welcome Screen
+BLUE_COLOR='\033[0;34m'
+PURPLE_COLOR='\033[0;32m'
+LIGHTBLUE_COLOR='\033[1;34m'
+echo -e "${BLUE_COLOR}
+                                                                                
+          |   | ||||| |||| |||| |||| |    ||||   ||   |    |
+          |   | |   | ||   |    |    |    |   |  ||   ||   |
+          ||||| |   | |||| | || |||| |    |   |  ||   | || |
+          |   | |   |    | |  | |    |    |   |  ||   |   ||
+          |   | ||||| |||| |||| |||| |||| ||||   ||   |    |
+                       |                                          
+          ${PURPLE_COLOR}
+                           TO THIS SHITHOLE 👋${LIGHTBLUE_COLOR}"
