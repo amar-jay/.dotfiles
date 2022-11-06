@@ -123,3 +123,8 @@ echo -e "${BLUE_COLOR}
                        |                                          
           ${PURPLE_COLOR}
                            TO THIS SHITHOLE 👋${LIGHTBLUE_COLOR}"
+
+# pnpm
+export PNPM_HOME="/home/manan/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end

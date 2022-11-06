@@ -45,7 +45,7 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 #--Golang config --
-export GOROOT=/usr/local/go-1.19
+export GOROOT="/usr/local/go-1.19"
 export GOPATH=$HOME/code/go
 export GOBIN=$GOPATH/bin
 export VERSION=1.17 # This specifies the current version of go used;

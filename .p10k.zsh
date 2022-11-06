@@ -1509,7 +1509,7 @@
   # Run `ifconfig` or `ip -4 a show` to see the names of all network interfaces.
   typeset -g POWERLEVEL9K_IP_INTERFACE='[ew].*'
   # Custom icon.
-  # typeset -g POWERLEVEL9K_IP_VISUAL_IDENTIFIER_EXPANSION='⭐'
+   typeset -g POWERLEVEL9K_IP_VISUAL_IDENTIFIER_EXPANSION='⭐'
 
   #########################[ proxy: system-wide http/https/ftp proxy ]##########################
   # Proxy color.
