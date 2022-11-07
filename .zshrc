@@ -43,7 +43,7 @@ ZSH_THEME=powerlevel10k/powerlevel10k
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -51,7 +51,7 @@ ZSH_THEME=powerlevel10k/powerlevel10k
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
 # e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-COMPLETION_WAITING_DOTS="%F{blue}wait...%f"
+COMPLETION_WAITING_DOTS="%F{blue}🔃...%f"
 # Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
 # COMPLETION_WAITING_DOTS="true"
 
@@ -110,9 +110,13 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=244"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Welcome Screen
+# export WELCOME_SCREEN= ~/.welcome_scrn
+# source ~/.welcome_scrn
+
 BLUE_COLOR='\033[0;34m'
 PURPLE_COLOR='\033[0;32m'
 LIGHTBLUE_COLOR='\033[1;34m'
+
 echo -e "${BLUE_COLOR}
                                                                                 
           |   | ||||| |||| |||| |||| |    ||||   ||   |    |
@@ -122,9 +126,10 @@ echo -e "${BLUE_COLOR}
           |   | ||||| |||| |||| |||| |||| ||||   ||   |    |
                        |                                          
           ${PURPLE_COLOR}
-                           TO THIS SHITHOLE 👋${LIGHTBLUE_COLOR}"
+                        AD EXTREMUM VIRTUTEM ${LIGHTBLUE_COLOR}
+			    Until the end 🔚"
+
 
 # pnpm
 export PNPM_HOME="/home/manan/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
-# pnpm end
