@@ -133,3 +133,4 @@ echo -e "${BLUE_COLOR}
 # pnpm
 export PNPM_HOME="/home/manan/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
+export PATH="$HOME/.config/cmd/:$PATH"

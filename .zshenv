@@ -61,3 +61,4 @@ export PATH=$HOME/.cargo/bin:$PATH
 export PATH="/home/linuxbrew/.linuxbrew/opt/llvm/bin:${PATH}"
 
 # Commands run at startup 
+. "$HOME/.cargo/env"
