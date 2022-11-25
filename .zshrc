@@ -134,3 +134,5 @@ echo -e "${BLUE_COLOR}
 export PNPM_HOME="/home/manan/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 export PATH="$HOME/.config/cmd/:$PATH"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
