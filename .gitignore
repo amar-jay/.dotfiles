@@ -8,5 +8,6 @@ node_modules
 !tmux*
 tmux/plugins
 !tabnine
+!vscode
 !yarn
 !wslu
