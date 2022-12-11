@@ -63,5 +63,9 @@ export PATH=$HOME/.cargo/bin:$PATH
 # export PATH="$(brew --prefix llvm)/bin:${PATH}"
 export PATH="/home/linuxbrew/.linuxbrew/opt/llvm/bin:${PATH}"
 
+#--Flutter & Dart config --
+export PATH="$PATH:$HOME/flutter/bin"
+export PATH="$PATH:$HOME/flutter/bin/cache/dart-sdk/bin"
+
 # Commands run at startup 
 . "$HOME/.cargo/env"
