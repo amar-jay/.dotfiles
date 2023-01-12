@@ -29,6 +29,7 @@ alias "p=xclip -o"
 alias "v=xclip -sel clip"
 
 # Paths
+export WIN_HOME="/mnt/c/Users/abdel"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -67,5 +68,22 @@ export PATH="/home/linuxbrew/.linuxbrew/opt/llvm/bin:${PATH}"
 export PATH="$PATH:$HOME/flutter/bin"
 export PATH="$PATH:$HOME/flutter/bin/cache/dart-sdk/bin"
 
+#--Android Emulator config --
+# Note: may vary with os
+export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+export ANDROID_HOME="$HOME/Android"
+export ANDROID_SDK_HOME="$HOME/.android/avd"
+export PATH=$PATH:$JAVA_HOME/bin
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools/bin
+#
 # Commands run at startup 
 . "$HOME/.cargo/env"
+
+
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export PATH=$PATH:$JAVA_HOME/bin
+
+export ANDROID_HOME="/home/manan/Android"
+export PATH="$PATH:$ANDROID_HOME/tools"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
