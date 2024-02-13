@@ -4,7 +4,7 @@ node_modules
 !.*
 !oh-my-zsh
 !README.md
-!nvim
+!nvim*
 !tmux*
 tmux/plugins
 !tabnine
