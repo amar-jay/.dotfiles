@@ -10,7 +10,7 @@ BACKUP_DIR=$HOME/.config_bak
 mkdir -p BACKUP_DIR
 
 
-# Function to display error messages and exit
+# to display error messages and exit
 function error_exit() {
     echo "$1" 1>&2
     exit 1
@@ -112,6 +112,30 @@ backup_config() {
     echo "Neovim backup created: $BACKUP_DIR/$backup_filename"
 }
 
+clone_repo() {
+  local repo_name=$1
+  local destination=$2
+
+    # Check if the gh CLI is installed
+  if command -v gh &> /dev/null; then
+      
+      # Check if already forked
+      forked=$(gh repo view $repo_name --json fork --jq '.fork')
+      if [[ "$forked" == "true" ]]; then
+          echo "You have already forked the repository. Cloning your fork."
+          git clone "$(gh repo view $repo_name --json html_url --jq '.parent.fork.html_url')"  "$destination" || error_exit "Failed to clone $repo_name repository"
+
+      else
+          echo "Forking the repository..."
+          gh repo fork $repo_name --clone
+          mv "$repo_name" "$destination"
+      fi
+  else
+      echo "gh CLI is not installed. Cloning the $repo_name repository using git."
+      git clone https://github.com/$(repo_name).git "$destination" || error_exit "Failed to clone $repo_name repository"
+  fi
+
+}
 
 greetings() {
   # Beautiful description of the nvim-config
@@ -144,6 +168,8 @@ greetings() {
   echo "=================================================================="
   echo ""
 }
+
+
 _setup() {
   # make sure `tmux` and `nvim` exists first, else install
   check_installed
@@ -155,10 +181,9 @@ _setup() {
 
   dir_name = "dotfiles-$(date +"%Y%m%d")"
 
-  # TODO: use gh else use git, if gh, fork it.
-#  gh repo clone amar-jay/.dotfiles $dir_name || error_exit "Failed to clone amar-jay/.dotfiles repository"
+  # use gh else use git, if gh, fork it first.
+  clone_repo "amar-jay/.dotfiles" $dir_name
 
-  git clone https://github.com/amar-jay/.dotfiles $dir_name || error_exit "Failed to clone amar-jay/.dotfiles repository"
 
   echo "Setting my variables, boy!!! Forget it if you set one already. Im overriding it."
 
