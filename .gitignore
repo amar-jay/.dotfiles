@@ -11,3 +11,4 @@ tmux/plugins
 !vscode/
 !yarn
 !wslu
+!.github
