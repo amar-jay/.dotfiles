@@ -77,39 +77,39 @@ echo "Using TMUX config file: $TMUX_CONFIG_FILE"
 
 backup_config() {
 
-  # --- TMUX ---
+    # --- TMUX ---
   
     # Check if config file exists
-    if [[ ! -f $TMUX_CONFIG_FILE ]]; then
-        error_exit "TMUX config file not found. Exiting."
+    if [[ -f $TMUX_CONFIG_FILE ]]; then
+        echo "Backing up prevoius tmux config...."
+        
+    
+        # Create backup filename
+        backup_filename="tmux-$(date +"%Y%m%d").conf.bak"
+    
+        # Backup the previous config file
+        echo "Creating backup..."
+        tar -czf "$BACKUP_DIR/$backup_filename" "$TMUX_CONFIG_FILE"
+    #    cp "$TMUX_CONFIG_FILE" "$BACKUP_DIR/$backup_filename"
+
+        echo "TMUX backup created: $BACKUP_DIR/$backup_filename"
     fi
 
-    # Create backup filename
-    backup_filename="tmux-$(date +"%Y%m%d").conf.bak"
-
-    # Backup the previous config file
-    echo "Creating backup..."
-    tar -czf "$BACKUP_DIR/$backup_filename" "$TMUX_CONFIG_FILE"
-#    cp "$TMUX_CONFIG_FILE" "$BACKUP_DIR/$backup_filename"
-
-    echo "TMUX backup created: $BACKUP_DIR/$backup_filename"
-
-
-  # --- NVIM ---
+    # --- NVIM ---
   
     # Check if config directory exists
-    if [[ ! -d $NVIM_CONFIG_DIR ]]; then
-        error_exit "Config directory not found. Exiting."
+    if [[ -d $NVIM_CONFIG_DIR ]]; then
+        echo "Backing up prevoius nvim config...."    
+
+        # Create backup filename
+        backup_filename="nvim-$(date +"%Y%m%d_%H%M%S").tar.bak"
+    
+        # Backup the previous config using tar
+        echo "Creating backup..."
+        tar -czf "$BACKUP_DIR/$backup_filename" "$NVIM_CONFIG_DIR" .
+    
+        echo "Neovim backup created: $BACKUP_DIR/$backup_filename"
     fi
-
-    # Create backup filename
-    backup_filename="nvim-$(date +"%Y%m%d_%H%M%S").tar.bak"
-
-    # Backup the previous config using tar
-    echo "Creating backup..."
-    tar -czf "$BACKUP_DIR/$backup_filename" "$NVIM_CONFIG_DIR" .
-
-    echo "Neovim backup created: $BACKUP_DIR/$backup_filename"
 }
 
 clone_repo() {
