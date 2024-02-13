@@ -1,8 +1,8 @@
 *
-node_modules
 **/*
-!.*
-!oh-my-zsh
+node_modules
+
+!.git*
 !README.md
 !nvim*
 !tmux*
@@ -11,4 +11,3 @@ tmux/plugins
 !vscode/
 !yarn
 !wslu
-!.github
