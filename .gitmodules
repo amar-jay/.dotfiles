@@ -1,12 +1,6 @@
-[submodule "tmux-config"]
-	path = tmux-config
-	url = https://github.com/amar-jay/tmux-config
 [submodule "nvim"]
 	path = nvim
-	url = https://github.com/amar-jay/nvim-config-lua
-[submodule ".oh-my-zsh"]
-	path = .oh-my-zsh
-	url = https://github.com/ohmyzsh/ohmyzsh
+	url = https://github.com/amar-jay/my-lazyvim-conf
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
 	url = https://github.com/ohmyzsh/ohmyzsh
