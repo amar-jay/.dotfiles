@@ -1,6 +1,3 @@
 [submodule "nvim"]
 	path = nvim
 	url = https://github.com/amar-jay/my-lazyvim-conf
-[submodule "oh-my-zsh"]
-	path = oh-my-zsh
-	url = https://github.com/ohmyzsh/ohmyzsh
