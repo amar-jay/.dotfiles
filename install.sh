@@ -1,10 +1,10 @@
 #!/bin/bash
 
-ln -s ./.config/.zshenv ./.zshenv 
-ln -s ./.config/.zshrc ./.zshrc 
-ln -s ./.config/.tmux.conf ./.tmux.conf 
-ln -s ./.config/.tmux ./.tmux
-ln -s ./.config/.oh-my-zsh ./.p10k.zsh
+ln -s $HOME/.config/.zshenv $HOME/.zshenv 
+ln -s $HOME/.config/.zshrc $HOME/.zshrc 
+ln -s $HOME/.config/tmux/tmux.conf $HOME/.tmux.conf 
+ln -s $HOME/.config/tmux $HOME/.tmux
+ln -s $HOME/.config/.oh-my-zsh ./.p10k.zsh
 
 BACKUP_DIR=$HOME/.config_bak
 mkdir -p BACKUP_DIR
@@ -185,6 +185,8 @@ _setup() {
   clone_repo "amar-jay/.dotfiles" $dir_name
 
 
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
   echo "Setting my variables, boy!!! Forget it if you set one already. Im overriding it."
 
 
@@ -194,8 +196,15 @@ _setup() {
   cp -r $dir_name/nvim $NVIM_CONFIG_DIR
   cp -r $dir_name/tmux $TMUX_CONFIG_FILE
 
-  echo "export XDG_CONFIG_HOME='$NVIM_CONFIG_DIR'"" >> $HOME/.bashrc
-  echo "export TMUX_CONFIG='$TMUX_CONFIG_FILE'"" >> $HOME/.bashrc
+  echo "export XDG_CONFIG_HOME='$NVIM_CONFIG_DIR'" >> $HOME/.bashrc
+  echo "export TMUX_CONFIG='$TMUX_CONFIG_FILE'" >> $HOME/.bashrc
+
+  if [ ! -e "$TMUX_CONFIG_FILE/plugins/tpm" ]; then
+  printf "WARNING: Cannot found TPM (Tmux Plugin Manager) \
+    at default location: \$HOME/.tmux/plugins/tpm.\n"
+  git clone https://github.com/tmux-plugins/tpm $TMUX_CONFIG_FILE/plugins/tpm
+  fi
+
 
   source $HOME/.bashrc
 
