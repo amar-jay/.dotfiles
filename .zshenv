@@ -49,7 +49,7 @@ export EDITOR="vi"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 #--Golang config --
-export GOROOT="/usr/local/go-1.19"
+export GOROOT="/usr/local/go"
 export GOPATH=$HOME/code/go
 export GOBIN=$GOPATH/bin
 export VERSION=1.17 # This specifies the current version of go used;
@@ -78,7 +78,7 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools/bin
 #
 # Commands run at startup 
-. "$HOME/.cargo/env"
+#. "$HOME/.cargo/env"
 
 
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
