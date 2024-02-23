@@ -2,7 +2,7 @@
 
 # aliases
 alias py=python3
-alias python="python.exe"
+alias python=python3
 alias sqlite=sqlite3
 alias vim="nvim"
 alias pg-start="sudo service postgresql start"
