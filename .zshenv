@@ -58,6 +58,7 @@ export PATH=$PATH:$HOME/code/go/bin
 
 #--Rust config --
 export PATH=$HOME/.cargo/bin:$PATH
+source "$HOME/.cargo/env"
 
 #--Carbon config --
 # brew import error
@@ -87,3 +88,5 @@ export PATH=$PATH:$JAVA_HOME/bin
 export ANDROID_HOME="/home/manan/Android"
 export PATH="$PATH:$ANDROID_HOME/tools"
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
+
+
