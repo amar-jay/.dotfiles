@@ -99,6 +99,7 @@ export AMENT_PREFIX_PATH=/opt/ros/humble
 export TURTLEBOT3_MODEL=burger
 
 export PATH=$PATH:$HOME/ardupilot/Tools/autotest
+export PATH=$PATH:$HOME/code/v/
 export PATH=/usr/lib/ccache:$PATH
 alias expl=nautilus
 export TURTLEBOT3_MODEL=burger
