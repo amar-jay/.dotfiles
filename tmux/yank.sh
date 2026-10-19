@@ -18,6 +18,8 @@ if is_app_installed pbcopy; then
   copy_backend="pbcopy"
 elif is_app_installed reattach-to-user-namespace; then
   copy_backend="reattach-to-user-namespace pbcopy"
+elif [ -n "${WAYLAND_DISPLAY-}" ] && is_app_installed wl-copy; then
+  copy_backend="wl-copy"
 elif [ -n "${DISPLAY-}" ] && is_app_installed xsel; then
   copy_backend="xsel -i --clipboard"
 elif [ -n "${DISPLAY-}" ] && is_app_installed xclip; then
